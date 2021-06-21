@@ -1,5 +1,6 @@
 # BigMac2
-import 
+import array
+import random
 
 var snake_array;  
 function create_snake(){
@@ -12,25 +13,18 @@ function create_snake(){
 
 create_snake() // invoking the method
 
-//painting the snake
 function paint(){
-
-
     var nx = snake_array[0].x;
     var ny = snake_array[0].y;
     if(d == "right") nx++;    
     else if(d == "left") nx--;
     if(d == "up") ny--;
     if(d == "down") ny++;
-
-    var tail = snake_array.pop(); // pops out the last cell
+    var tail = snake_array.pop(); 
     tail.x = nx;
     tail.y = ny;
     snake_array.unshift(tail)
-
-    
-
     }
 }
 
-paint() // invoking the method
+paint()
